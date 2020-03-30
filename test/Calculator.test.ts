@@ -18,7 +18,7 @@ describe('aritmetica', function(){
 describe('aritmetica', function(){
   it('Resta 2-3', function() {
       let result = Calculator.Resta(2, 3);
-      expect(result).equal(-1);
+      expect(result).equal(1);
     }); 
 });
 
@@ -27,5 +27,13 @@ describe('aritmetica', function(){
         let result = Calculator.Multiplicar(5, 2);
         expect(result).equal(10);
       }); 
+
+});
+
+describe('aritmetica', function(){
+  it('Division 6/2', function() {
+      let result = Calculator.Multiplicar(6, 2);
+      expect(result).equal(3);
+    }); 
 
 });

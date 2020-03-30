@@ -23,7 +23,7 @@ export default class calculator {
           arr.push('');  
         }
   
-        for(let i = 0; i < b; i--){
+        for(let i = 0; i < b; i++){
           arr.pop();  
         }
         return arr.length;
@@ -34,11 +34,10 @@ export default class calculator {
           arr.push('');  
         }
   
-        for(let i = 0; i < a; i--){
+        for(let i = 0; i < a; i++){
           arr.pop();  
         }
         return arr.length;
-
       }
 
     }
@@ -55,10 +54,16 @@ export default class calculator {
 
     static Dividir(a: number, b: number){
       const arr = [];
-      
+      let aux = 0;
+      let aux1 = a
 
       if(a > b){
-        
+
+        for(let i=0; aux1 == 0; i ++){
+          aux1 = this.Resta(aux1,b);
+          aux = this.Sumar(aux,1);
+        }
+        return aux;
       }
 
 
