@@ -53,20 +53,17 @@ export default class calculator {
     }
 
     static Dividir(a: number, b: number){
-      const arr = [];
       let aux = 0;
       let aux1 = a
 
       if(a > b){
 
-        for(let i=0; aux1 == 0; i ++){
+        while(aux1 != 0){
           aux1 = this.Resta(aux1,b);
           aux = this.Sumar(aux,1);
         }
         return aux;
       }
-
-
     }
 
   }
