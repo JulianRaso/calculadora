@@ -17,15 +17,29 @@ export default class calculator {
     static Resta(a: number, b: number){
       const arr = [];
 
-      for(let i = 0; i < a; i++){
-        arr.push('');  
+      if(a > b){
+
+        for(let i = 0; i < a; i++){
+          arr.push('');  
+        }
+  
+        for(let i = 0; i < b; i--){
+          arr.pop();  
+        }
+        return arr.length;
       }
 
-      for(let i = 0; i < b; i--){
-        arr.pop();  
+      else{
+        for(let i = 0; i < b; i++){
+          arr.push('');  
+        }
+  
+        for(let i = 0; i < a; i--){
+          arr.pop();  
+        }
+        return arr.length;
+
       }
-       
-      return arr.length;
 
     }
 
@@ -37,6 +51,17 @@ export default class calculator {
         }
 
         return aux;
+    }
+
+    static Dividir(a: number, b: number){
+      const arr = [];
+      
+
+      if(a > b){
+        
+      }
+
+
     }
 
   }
