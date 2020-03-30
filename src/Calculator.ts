@@ -1,32 +1,42 @@
 export default class calculator {
 
-    static Sum(a: number, b: number): number {
-      let c = a + b;
-      return c;
-    }
-  
-    static Difference(a: number, b: number): number {
-      let c = a - b;
-      return c;
-    }
-
     static Sumar(a: number, b: number){
         const arr = [];
 
-        for(a; a>= 0; a--){
-            
-        }
-            
+      for(let i = 0; i < a; i++){
+        arr.push('');  
+      }
+
+      for(let i = 0; i < b; i++){
+        arr.push('');  
+      }
+       
+      return arr.length;
+    }
+
+    static Resta(a: number, b: number){
+      const arr = [];
+
+      for(let i = 0; i < a; i++){
+        arr.push('');  
+      }
+
+      for(let i = 0; i < b; i--){
+        arr.pop();  
+      }
+       
+      return arr.length;
+
     }
 
     static Multiplicar(a: number, b: number){
-        const arr = [];
+        let aux = 0;
 
-        for(a;a>= 0; a--){
-            for(b; b>=0; b--){
-              arr.push('a');  
-            }
+        for(let i = 0; i < a; i++){
+              aux = this.Sumar(b, aux)  
         }
+
+        return aux;
     }
 
   }
