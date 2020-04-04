@@ -11,7 +11,7 @@ export default class calculator {
       for(let i = 0; i < b; i++){
         arr.push('');  
       }
-      state.estado = arr.length;
+      return state.estado = arr.length;
     }
 
     static Resta(a: number, b: number){
@@ -37,7 +37,7 @@ export default class calculator {
         for(let i = 0; i < a; i++){
           arr.pop();  
         }
-        state.estado = arr.length;
+        return state.estado = arr.length;
       }
     }
 
@@ -49,10 +49,10 @@ export default class calculator {
     }
 
     static Dividir(a: number, b: number){
-      state.estadoAux = a;
+      let aux=a;
       
-        while(state.estadoAux > 0){
-          state.estadoAux = this.Resta(state.estadoAux,b);
+        while(aux > 0){
+          aux = this.Resta(aux,b);
           state.estado = this.Sumar(state.estado,1);
         }
     }
