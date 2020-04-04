@@ -56,14 +56,12 @@ export default class calculator {
       let aux = 0;
       let aux1 = a
 
-      if(a > b){
 
-        while(aux1 != 0){
+        while(aux1 > 0){
           aux1 = this.Resta(aux1,b);
           aux = this.Sumar(aux,1);
         }
         return aux;
-      }
     }
 
   }
