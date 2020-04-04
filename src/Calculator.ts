@@ -1,3 +1,4 @@
+import state from '../src/State';
 export default class calculator {
 
     static Sumar(a: number, b: number){
@@ -10,8 +11,7 @@ export default class calculator {
       for(let i = 0; i < b; i++){
         arr.push('');  
       }
-       
-      return arr.length;
+      state.estado = arr.length;
     }
 
     static Resta(a: number, b: number){
@@ -26,7 +26,7 @@ export default class calculator {
         for(let i = 0; i < b; i++){
           arr.pop();  
         }
-        return arr.length;
+        state.estado = arr.length;
       }
 
       else{
@@ -37,31 +37,24 @@ export default class calculator {
         for(let i = 0; i < a; i++){
           arr.pop();  
         }
-        return arr.length;
+        state.estado = arr.length;
       }
-
     }
 
     static Multiplicar(a: number, b: number){
-        let aux = 0;
 
         for(let i = 0; i < a; i++){
-              aux = this.Sumar(b, aux)  
+          state.estado = this.Sumar(b, state.estado)  
         }
-
-        return aux;
     }
 
     static Dividir(a: number, b: number){
-      let aux = 0;
-      let aux1 = a
-
-
-        while(aux1 > 0){
-          aux1 = this.Resta(aux1,b);
-          aux = this.Sumar(aux,1);
+      state.estadoAux = a;
+      
+        while(state.estadoAux > 0){
+          state.estadoAux = this.Resta(state.estadoAux,b);
+          state.estado = this.Sumar(state.estado,1);
         }
-        return aux;
     }
 
   }
