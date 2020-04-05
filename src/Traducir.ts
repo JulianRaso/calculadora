@@ -1,3 +1,4 @@
+import { nodeModuleNameResolver } from "typescript";
 
 
 export default class traducir {
@@ -5,49 +6,60 @@ export default class traducir {
     
     static Traductir(a:string){
         let origen = a;
-        let numFinal = null;
-
-        numFinal = this.traducirNumero(origen.trim());
-
-        return numFinal;
+        
+        return this.traducirNumero(origen.replace(/\s/g, ""));
 
     }
 
     static traducirNumero(num : string){
         let final;
+
         switch(num){
             case "cer":
-                final = "0";
+                num.replace("cero","");
+                final.push("0");
                 break;
             case "uno":
-                final = "1";
+                num.replace("uno","");
+                final.push("1");
                 break;
             case "dos":
-                final = "2";
+                num.replace("dos","");
+                final.push("2");
                 break;
             case "tre":
-                final = "3";
+                num.replace("tres","");
+                final.push("3");
                 break;
             case "cua":
-                final = "4";
+                num.replace("cuatro","");
+                final.push("4");
                 break;
             case "cin":
-                final = "5";
+                num.replace("cinco","");
+                final.push("5");
                 break;
             case "sei":
-                final = "6";
+                num.replace("seis","");
+                final.push("6");
                 break;
             case "sie":
-                final = "7";
+                num.replace("siete","");
+                final.push("7");
                 break;
             case "och":
-                final = "8";
+                num.replace("ocho","");
+                final.push("8");
                 break;
             case "nue":
-                final = "9";
+                num.replace("nueve","");
+                final.push("9");
                 break;
                 
         }
-        return final;
+        let result = final.join();
+        return result
     }
+
+    
 }
