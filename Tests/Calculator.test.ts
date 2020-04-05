@@ -1,6 +1,8 @@
 import { expect } from 'chai';
 import Calculator from '../src/Calculator';
 import state from '../src/State';
+import Traductor from '../src/Traducir';
+import traducir from '../src/Traducir';
 
 describe('aritmetica', function() {
     it('Sumar 5+2', function() {
@@ -35,5 +37,12 @@ describe('aritmetica', function(){
   it('Division 6/2', function() {
       Calculator.Dividir(6,2);
       expect(state.estado).equal(3);
+    }); 
+});
+
+describe('Traductor', function(){
+  it('123', function() {
+      let result = traducir.Traductir(" uno dos tres");
+      expect(result).equal(123);
     }); 
 });
