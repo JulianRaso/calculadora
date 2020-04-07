@@ -1,14 +1,11 @@
-import { nodeModuleNameResolver } from "typescript";
-
 
 export default class traducir {
 
     
-    static Traductir(a:string){
-        let NumTrad = a.replace(/\s/g, "");
+    static Traductir(a:string):number{
 
         
-
+        return 0;
     }
 
     static traducirNumero(num : string){
