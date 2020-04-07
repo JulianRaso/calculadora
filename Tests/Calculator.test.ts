@@ -21,7 +21,7 @@ describe('aritmetica', function(){
 describe('aritmetica', function(){
   it('Resta 2-3', function() {
       Calculator.Resta(2, 3);
-      expect(state.ResulEstado(-1)).equal("Resultado Erroneo");
+      expect(state.ResulEstado(-1)).equal(-1);
     }); 
 });
 
@@ -35,14 +35,14 @@ describe('aritmetica', function(){
 
 describe('aritmetica', function(){
   it('Division 6/2', function() {
-      Calculator.Dividir(6,2);
-      expect(state.estado).equal(3);
+      let resultado = Calculator.Dividir(6,2);
+      expect(resultado).equal(3);
     }); 
 });
 
 describe('Traductor', function(){
   it('123', function() {
-      let result = traducir.Traductir(" uno dos tres");
-      expect(result).equal(123);
+      let result = traducir.Traductir(" cerodos");
+      expect(result).equal(0);
     }); 
 });

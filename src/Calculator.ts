@@ -26,18 +26,17 @@ export default class calculator {
         for(let i = 0; i < b; i++){
           arr.pop();  
         }
-        state.estado = arr.length;
+        return state.estado = arr.length;
       }
 
       else{
-        for(let i = 0; i < b; i++){
-          arr.push('');  
+        let c=0;
+        
+        for(b=b;b>0;b--){
+            for(c=a;c==a;a--){
+            }
         }
-  
-        for(let i = 0; i < a; i++){
-          arr.pop();  
-        }
-        return state.estado = arr.length;
+        return state.estado = a;
       }
     }
 
@@ -49,12 +48,18 @@ export default class calculator {
     }
 
     static Dividir(a: number, b: number){
-      let aux=a;
       
-        while(aux > 0){
-          aux = this.Resta(aux,b);
-          state.estado = this.Sumar(state.estado,1);
-        }
+      if(a>b){
+        while(a > 0){
+                  a = this.Resta(a,b);
+                  state.estado = this.Sumar(state.estado,1);
+                }
+                return state.estado;
+      }
+      else{
+        return state.estado = 0;
+      }
+        
     }
 
   }
