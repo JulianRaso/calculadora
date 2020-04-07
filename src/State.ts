@@ -1,19 +1,14 @@
 export default class state {
 
-    static estado = 0;
+    static Num1;
+    static Num2;
 
-    static ResulEstado(a:number){
-        let aux = this.estado;
-        this.estado= 0;
-        let mss = "Resultado Erroneo";
+    // A y C reciben los parametros a calcular, B recibe la Operacion
 
-        if(aux == a){
-            return aux;
-        }
-        else{
-            this.estado = 0;
-            return mss;
-        }
+    static RealizarOp(a:string,b:string,c:string){
+
+
+            
     }
 
 }

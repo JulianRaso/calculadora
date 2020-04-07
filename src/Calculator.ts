@@ -11,7 +11,7 @@ export default class calculator {
       for(let i = 0; i < b; i++){
         arr.push('');  
       }
-      return state.estado = arr.length;
+      return arr.length;
     }
 
     static Resta(a: number, b: number){
@@ -26,7 +26,7 @@ export default class calculator {
         for(let i = 0; i < b; i++){
           arr.pop();  
         }
-        return state.estado = arr.length;
+        return arr.length;
       }
 
       else{
@@ -36,28 +36,31 @@ export default class calculator {
             for(c=a;c==a;a--){
             }
         }
-        return state.estado = a;
+        return a;
       }
     }
 
     static Multiplicar(a: number, b: number){
+      let aux;
 
         for(let i = 0; i < a; i++){
-          state.estado = this.Sumar(b, state.estado)  
+          aux = this.Sumar(b, aux);  
         }
+        return aux;
     }
 
     static Dividir(a: number, b: number){
+      let aux = 0;
       
       if(a>b){
         while(a > 0){
                   a = this.Resta(a,b);
-                  state.estado = this.Sumar(state.estado,1);
+                  aux = this.Sumar(aux,1);
                 }
-                return state.estado;
+                return aux;
       }
       else{
-        return state.estado = 0;
+        return aux;
       }
         
     }

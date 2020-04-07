@@ -1,34 +1,36 @@
 import { expect } from 'chai';
 import Calculator from '../src/Calculator';
 import state from '../src/State';
-import Traductor from '../src/Traducir';
 import traducir from '../src/Traducir';
+
+
+// Calculator (Suma,Resta[+,-],Producto,Division)
 
 describe('aritmetica', function() {
     it('Sumar 5+2', function() {
-      Calculator.Sumar(5, 2);
-      expect(state.ResulEstado(7)).equal(7);
+      let resultado = Calculator.Sumar(5, 2);
+      expect(resultado).equal(7);
     }); 
   });
 
 describe('aritmetica', function(){
   it('Resta 5-2', function() {
-      Calculator.Resta(5, 2);
-      expect(state.ResulEstado(3)).equal(3);
+      let resultado = Calculator.Resta(5, 2);
+      expect(resultado).equal(3);
     }); 
 }); 
 
 describe('aritmetica', function(){
   it('Resta 2-3', function() {
-      Calculator.Resta(2, 3);
-      expect(state.ResulEstado(-1)).equal(-1);
+     let resultado = Calculator.Resta(2, 3);
+      expect(resultado).equal(-1);
     }); 
 });
 
 describe('aritmetica', function(){
     it('Multiplicacion 5x2', function() {
-        Calculator.Multiplicar(5, 2);
-        expect(state.ResulEstado(10)).equal(10);
+        let resultado = Calculator.Multiplicar(5, 2);
+        expect(resultado).equal(10);
       }); 
 
 });
@@ -39,6 +41,8 @@ describe('aritmetica', function(){
       expect(resultado).equal(3);
     }); 
 });
+
+// State 
 
 describe('Traductor', function(){
   it('123', function() {
