@@ -162,3 +162,20 @@ describe('Traducir', function(){
       expect(result).equal(111222333444555666777888);
     }); 
 });
+
+
+//Test Jose
+
+describe('Test Jose', function(){
+  it('100 9 seguidos + 1', function() {
+      let Num1 = "";
+      let Num2 = "uno";
+      let Op = "suma";
+      
+      for(let i=0; i<100; i++){
+        Num1 = Num1.concat("nu ev e");
+      }
+      let result = state.RealizarOp(Num1,Op,Num2);  
+      expect(result).equal(1e+100);
+    }); 
+});
