@@ -109,33 +109,11 @@ describe('Realizador Operaciones', function(){
 
 describe('Realizador Operaciones', function(){
   it('Parametro Error', function() {
-      let Num1 = "unodos";
-      let Num2 = "suma";
-      let Op = "dos";
-
-      let result = state.RealizarOp(Num1,Op,Num2);
-      expect(result).equal("Syntax Error");
-    }); 
-});
-
-describe('Realizador Operaciones', function(){
-  it('Parametro Error', function() {
       let Num1 = "resta";
       let Num2 = "dosuno";
       let Op = "unodos";
 
       let result = state.RealizarOp(Num1,Op,Num2);  
-      expect(result).equal("Syntax Error");
-    }); 
-});
-
-describe('Realizador Operaciones', function(){
-  it('Parametro Error', function() {
-      let Num1 = "unodos";
-      let Num2 = "resta";
-      let Op = "dos";
-
-      let result = state.RealizarOp(Num1,Op,Num2);
       expect(result).equal("Syntax Error");
     }); 
 });
@@ -153,17 +131,6 @@ describe('Realizador Operaciones', function(){
 
 describe('Realizador Operaciones', function(){
   it('Parametro Error', function() {
-      let Num1 = "unodos";
-      let Num2 = "multiplicar";
-      let Op = "dos";
-
-      let result = state.RealizarOp(Num1,Op,Num2);
-      expect(result).equal("Syntax Error");
-    }); 
-});
-
-describe('Realizador Operaciones', function(){
-  it('Parametro Error', function() {
       let Num1 = "dividir";
       let Num2 = "dosuno";
       let Op = "unodos";
@@ -173,19 +140,6 @@ describe('Realizador Operaciones', function(){
     }); 
 });
 
-describe('Realizador Operaciones', function(){
-  it('Parametro Error', function() {
-      let Num1 = "unodos";
-      let Num2 = "dividir";
-      let Op = "dos";
-
-      let result = state.RealizarOp(Num1,Op,Num2);
-      expect(result).equal("Syntax Error");
-    }); 
-});
-
-
-/*
 //Traducir
 
 describe('Traducir', function(){
@@ -208,5 +162,3 @@ describe('Traducir', function(){
       expect(result).equal(111222333444555666777888);
     }); 
 });
-
-*/
