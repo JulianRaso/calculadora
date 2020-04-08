@@ -2,10 +2,10 @@
 
     static NumTrad;
 
-    static Traductir(a:string):number{
+    static Traductir(a:string){
         this.NumTrad=a;
 
-        while (this.NumTrad.contains("uno") || this.NumTrad.contains("dos") || this.NumTrad.contains("tres") || this.NumTrad.contains("cuatro") || this.NumTrad.contains("cinco") || this.NumTrad.contains("seis") || this.NumTrad.contains("seite") || this.NumTrad.contains("ocho") || this.NumTrad.contains("nueve") || this.NumTrad.contains("cero")){
+        while (this.NumTrad.includes("uno") == true|| this.NumTrad.includes("dos") == true || this.NumTrad.includes("tres") == true || this.NumTrad.includes("cuatro") == true || this.NumTrad.includes("cinco") == true || this.NumTrad.includes("seis") == true || this.NumTrad.includes("siete") == true || this.NumTrad.includes("ocho") == true || this.NumTrad.includes("nueve") == true || this.NumTrad.includes("cero") == true){
             this.NumTrad = this.NumTrad.replace("uno",1);
             this.NumTrad = this.NumTrad.replace("dos",2);
             this.NumTrad = this.NumTrad.replace("tres",3);
@@ -18,8 +18,6 @@
             this.NumTrad = this.NumTrad.replace("cero",0);
 
         }
-        
-        
         return parseInt(this.NumTrad,10);
     }
 

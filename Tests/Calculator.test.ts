@@ -3,7 +3,6 @@ import Calculator from '../src/Calculator';
 import state from '../src/State';
 import traducir from '../src/Traducir';
 
-/*
 // Calculator (Suma,Resta[+,-],Producto,Division)
 
 describe('aritmetica', function() {
@@ -40,11 +39,14 @@ describe('aritmetica', function(){
       let resultado = Calculator.Dividir(6,2);
       expect(resultado).equal(3);
     }); 
+
+});describe('aritmetica', function(){
+  it('Division Error', function() {
+      let resultado = Calculator.Dividir(3,4);
+      expect(resultado).equal(0);
+    }); 
 });
 
-*/
-
-/*
 // State 
 
 describe('Realizador Operaciones', function(){
@@ -82,12 +84,12 @@ describe('Realizador Operaciones', function(){
 
 describe('Realizador Operaciones', function(){
   it('Division', function() {
-      let Num1 = "";
-      let Num2 = "";
-      let Op = "";
+      let Num1 = "seisdos";
+      let Num2 = "cuatro";
+      let Op = "dividir";
 
       let result = state.RealizarOp(Num1,Op,Num2);
-      expect(result).equal(0);
+      expect(result).equal(15);
     }); 
 });
 
@@ -112,7 +114,9 @@ describe('Realizador Operaciones', function(){
       expect(result).equal("Syntax Error");
     }); 
 });
-/*/
+
+
+/*
 //Traducir
 
 describe('Traducir', function(){
@@ -128,3 +132,12 @@ describe('Traducir', function(){
       expect(result).equal(11);
     }); 
 });
+
+describe('Traducir', function(){
+  it('24 Numeros', function() {
+      let result = traducir.Traductir("unounounodosdosdostrestrestrescuatrocuatrocuatrocincocincocincoseisseisseissietesietesieteochoochoocho");
+      expect(result).equal(111222333444555666777888);
+    }); 
+});
+
+*/
