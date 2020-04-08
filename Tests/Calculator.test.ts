@@ -3,7 +3,7 @@ import Calculator from '../src/Calculator';
 import state from '../src/State';
 import traducir from '../src/Traducir';
 
-
+/*
 // Calculator (Suma,Resta[+,-],Producto,Division)
 
 describe('aritmetica', function() {
@@ -42,6 +42,9 @@ describe('aritmetica', function(){
     }); 
 });
 
+*/
+
+/*
 // State 
 
 describe('Realizador Operaciones', function(){
@@ -90,9 +93,9 @@ describe('Realizador Operaciones', function(){
 
 describe('Realizador Operaciones', function(){
   it('Parametro Error', function() {
-      let Num1 = "";
-      let Num2 = "";
-      let Op = "";
+      let Num1 = "suma";
+      let Num2 = "dosuno";
+      let Op = "unodos";
 
       let result = state.RealizarOp(Num1,Op,Num2);  
       expect(result).equal("Syntax Error");
@@ -101,13 +104,27 @@ describe('Realizador Operaciones', function(){
 
 describe('Realizador Operaciones', function(){
   it('Parametro Error', function() {
-      let Num1 = "";
-      let Num2 = "";
-      let Op = "";
+      let Num1 = "unodos";
+      let Num2 = "suma";
+      let Op = "dos";
 
       let result = state.RealizarOp(Num1,Op,Num2);
       expect(result).equal("Syntax Error");
     }); 
 });
-
+/*/
 //Traducir
+
+describe('Traducir', function(){
+  it('Test translate', function() {
+      let result = traducir.Traductir("unodostrescuatrocincoseissieteochonuevecero");
+      expect(result).equal(1234567890);
+    }); 
+});
+
+describe('Traducir', function(){
+  it('Num repetido', function() {
+      let result = traducir.Traductir("unouno");
+      expect(result).equal(11);
+    }); 
+});
